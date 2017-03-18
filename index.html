@@ -25,13 +25,48 @@
 		    userFeed.run();
 		</script>
 
+		<style>
+			.instagram-banner>.instagram-banner-col {
+			    float: left;
+			    width: 50%;
+			}
+
+			.instagram-banner>.instagram-banner-col>a {
+			    display: block;
+			    height: 0;
+			    padding-bottom: 100%;
+			    background-repeat: no-repeat;
+			    background-position: center center;
+			    -webkit-background-size: cover;
+			    -moz-background-size: cover;
+			    -o-background-size: cover;
+			    background-size: cover;
+			    overflow: hidden;
+			}
+
+			@media screen and (max-width: 767px) {
+			    .instagram-banner>.instagram-banner-col>a:nth-child(2n+1) {
+			        clear: both;
+			    }
+			}
+
+			@media screen and (min-width: 768px) {
+			    .instagram-banner>.instagram-banner-col {
+			        width: 20%;
+			    }
+			    .instagram-banner>.instagram-banner-col>a:nth-child(5n+1) {
+			        clear: both;
+			    }
+			}
+		</style>
+
 	</head>
 	
 	<body>
 		<h1>Test</h1>
 
 		<div id="instafeed" class="instagram-banner"></div>
-		
+
 	</body>
 	
 </html>
