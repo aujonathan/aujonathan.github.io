@@ -8,10 +8,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Test</title>
 
+		<script type="text/javascript" src="https://aujonathan.github.io/instafeed.min.js"></script>
+
+		<script type="text/javascript">
+		    var feed = new Instafeed({
+		        get: 'tagged',
+		        tagName: 'awesome',
+		        clientId: '82940550e80b44bb8aabb9ac8f73afaf'
+		    });
+		    feed.run();
+		</script>
+
 	</head>
 	
 	<body>
-		Test
+		<h1>Test</h1>
+
+		<div id="instafeed"></div>
 	</body>
 	
 </html>
