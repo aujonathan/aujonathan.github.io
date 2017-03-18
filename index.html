@@ -11,12 +11,15 @@
 		<script type="text/javascript" src="instafeed-min.js"></script>
 
 		<script type="text/javascript">
-		    var feed = new Instafeed({
-		        get: 'tagged',
-		        tagName: 'awesome',
-		        clientId: '82940550e80b44bb8aabb9ac8f73afaf'
+		    var userFeed = new Instafeed({
+		        get: 'user',
+		        userId: '4298990900',
+		        accessToken: '219206779.c22ecc0.a5bf2e8d47134ca48654778e9439a73b',
+		        template: '<div class="instagram-banner-col"><a href="{{link}}" style="background-image: url({{image}});"></a></div>',
+		        resolution: 'standard_resolution',
+		        limit: 10
 		    });
-		    feed.run();
+		    userFeed.run();
 		</script>
 
 	</head>
@@ -24,7 +27,7 @@
 	<body>
 		<h1>Test</h1>
 
-		<div id="instafeed"></div>
+		<div id="instafeed"><div class="instagram-banner-col"><a href="{{link}}" style="background-image: url({{image}});"></a></div></div>
 	</body>
 	
 </html>
